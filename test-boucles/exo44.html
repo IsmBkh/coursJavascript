@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+  <title>Utilisation d'un test logique</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <script type="text/javascript">
+
+    const tab = [-2,1,4,2] ;
+
+    function soustrait(x){
+
+        if (x-2 > 0){
+            alert("Résultat : positif");
+        }else if(x-2 === 0){
+            alert("Résultat : Nul");
+        }else{
+            alert("Résultat : Nombre Négatif !");
+        }
+    }
+
+    function affiche(){
+
+        tab.forEach(i => {
+            console.log(soustrait(i));
+        });
+        
+    }
+
+
+
+    // VOICI LA VERSION LA PLUS COURTE DU CODE : 
+
+    // const soustrait = x => alert(x - 2 > 0 ? "Résultat : positif" : x - 2 === 0 ? "Résultat : Nul" : "Résultat : Nombre Négatif !");
+    // const affiche = () => tab.forEach(soustrait);
+
+
+  </script>
+</head>
+<body>
+
+<h1>Utilisation d'un test logique</h1>
+
+<p>Cliquez sur le bouton pour lancer la fonction&nbsp;: <button onclick="affiche()">Lancer la fonction</button></p>
+
+</body>
+</html>
