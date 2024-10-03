@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 
+    Reproduire l'effet précédent :
+
+    police Verdana ;
+    un trait en travers des lettres (line-through) ;
+    une multiplication par 2 de la hauteur des lignes ;
+    une multiplication par 1,5 de la taille des caractères par rapport à la taille par défaut ;
+    une capitalisation des premières lettres des mots.
+    ... au passage de la souris
+    -->
+
+
+    <p onmouseover="this.style.fontFamily='Verdana' ; this.style.textDecoration='line-through'; this.style.lineHeight='2'; this.style.fontSize='1.5em'; this.style.textTransform='capitalize';" 
+    onmouseout="this.style.fontFamily='' ; this.style.textDecoration=''; this.style.lineHeight=''; this.style.fontSize=''; this.style.textTransform='';">Nous allons complètement modifier ce paragraphe</p>
+
+</body>
+</html>

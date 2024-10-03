@@ -1,0 +1,11 @@
+############################# NOTES COURS #############################
+
+
+Nœuds et Arborescence dans le DOM
+
+Le DOM (Document Object Model) est une représentation structurée des documents HTML et XML 
+    =>permet aux scripts (comme JavaScript) de manipuler le contenu 
+    =>la structure et le style des pages web
+    =>Dans ce modèle, tout élément d'un document est représenté par un nœud.
+
+

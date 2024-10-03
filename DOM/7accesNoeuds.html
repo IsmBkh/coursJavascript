@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+<meta charset="UTF-8">
+<head>
+<title>Accès relatif aux éléments</title>
+<script>
+
+// La fonction change_enfants() sélectionne le paragraphe à l'aide de son identifiant.
+// Combien d'enfants le paragraphe a-t-il ?
+// Changer la valeur du premier enfant de l'élément paragraphe en "On change le texte plein d'enfants ".
+// Diviser par deux les hauteur et largeur de l'image (le dernier enfant).
+// Changer le code HTML du deuxième enfant en "<strong>importants</strong>"
+// Changer la propriété display de style du quatrième enfant en "block".
+	
+	function change_enfants(){
+
+        let text = document.getElementById("paragraphe");
+
+        // Affiche les enfants dans une nouvelle petite fenetre 
+        alert(text.childNodes.length);
+
+        // nb pour afficher un tableau dans la console : 
+        console.table(text.childNodes);
+
+        // Change la valeur du premier enfant
+        text.firstChild.textContent="On change le texte plein d'enfants ";
+
+        // Diviser par deux les hauteur et largeur de l'image (le dernier enfant).
+
+        let currentHeight = text.lastElementChild.getAttribute("width");
+        let currentWidth = text.lastElementChild.getAttribute("height");
+
+        text.lastElementChild.setAttribute("height", currentHeight / 1.5);
+        text.lastElementChild.setAttribute("width", currentWidth / 1.5);
+
+        // changement du 2eme child 
+        text.childNodes[1].innerHTML="<strong> important </strong>";
+
+        // changement du 4eme child en block 
+        text.childNodes[3].style.display="block";
+
+
+			
+		}		
+</script>
+
+</head>
+<body>
+
+<p id="paragraphe" onclick="change_enfants()">Un texte avec plein d'enfants, <b>en gras</b>, <i>en italique</i>… et une image <img alt="Un dauphin" src="img/dauphin3_1_.jpg" height="111" width="200"></p>
+
+</body>
+</html>

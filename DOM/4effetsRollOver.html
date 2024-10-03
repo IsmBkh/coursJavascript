@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<!-- 
+1 - Trouver deux images si possible de tailles différentes sur votre machine ; 
+les insérer dans une page web élémentaire en rollover. 
+Tenir compte des effets de hauteur et de largeur de telle manière qu'aucune image ne soit déformée.
+
+2 - À l'aide de la propriété this.innerHTML que vous expérimenterez si vous ne la connaissez pas, reproduire l'exemple 
+Un petit texte avec un texte en italique au milieu -->
+
+    <!-- utilisation de innerHTML -->
+    <img src="img/ballon-3.jpg" onmouseover="this.src='img/ballon-7.jpg'" onmouseout="this.src='img/ballon-3.jpg'" style="width: 100px; height: auto;" alt="">
+
+    <br>
+
+    <!-- utilisation de innerHTML -->
+    <p>Un petit texte <em onmouseover="this.innerHTML='<strong>en gras</strong>';" onmouseout="this.innerHTML='en italique';">en italique</em></p>
+
+</body>
+</html>
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="fr">
+<head>
+<title>Exercice sur getElementById</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<script type="text/javascript">
+	<!--
+        function modif_paragraphe() {
+            var paragraphe = document.getElementsByTagName("p")[0];
+
+            paragraphe.innerHTML='Premier paragraphe <em>modifié.</em>';
+            
+        }
+
+        function centrage_h1(){
+            var titre = document.getElementsByTagName("h1")[0];
+
+            titre.style.textAlign="center";
+
+
+        }
+
+	//-->
+</script>
+</head>
+
+<!-- 2. Créer une fonction modif_paragraphe, appelée en cliquant sur le titre. Cette fonction sélectionne le paragraphe en utilisant son identifiant, 
+        puis le modifie avec la propriété innerHTML, en remplaçant le mot original en caractères droit par le mot corrigé, en italique.
+
+3. Créer une fonction centrage_h1, appelée en cliquant sur le paragraphe. Cette fonction détecte d'abord les éléments portant le nom de balise h1. 
+    Elle sélectionne ensuite le premier d'entre eux (ça tombe bien, il n'y en a qu'un seul sur la page !), 
+    et modifie son attribut align, en lui affectant la valeur "center", à l'aide de la méthode setAttribute… dont vous testerez le fonctionnement. -->
+
+<body>
+    <h1 title="Quand on clique, modif du paragraphe" onclick="modif_paragraphe()">Grand titre</h1>
+
+    <p id="premier" title="Quand on clique, centrage du titre" onclick="centrage_h1()">Premier paragraphe original.</p>
+</body>
+
+
+</html>
