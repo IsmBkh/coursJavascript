@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+  <title>Écriture d'une fonction simple</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <script type="text/javascript">
+
+    let a = 3 ; 
+    let b = 2 ; 
+
+    function multiplie(x = 8) {
+
+    // x = window.parseFloat(prompt("Veuillez saisir une un nombre"));
+
+    if (x != null)  {
+            return x * 3; 
+        }
+
+    }
+
+    function affiche(){
+
+        alert(multiplie(a));
+        alert(multiplie(b));
+        alert(multiplie());
+
+    }
+    
+
+
+  </script>
+</head>
+<body>
+
+<h1>Écriture d'une fonction avec arguments</h1>
+
+<p>Cliquez sur le bouton pour lancer la fonction&nbsp; de calcul : <button onclick="affiche()">Lancer la fonction</button></p>
+
+
+
+</body>
+</html>

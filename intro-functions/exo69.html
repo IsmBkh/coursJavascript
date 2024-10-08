@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Exercice : définition de fonctions fléchées</title>
+		<meta charset="UTF-8">
+		<script>
+
+
+    // ***************************** EXO AVEC FUNCTION FLÉCHÉE ***************************** 
+
+    // LES FUNCTIONS FLÉCHÉE SONT LA MANIÈRE DECRIRE LES FTUNCT
+
+
+
+
+    // fonction1 prend un paramètre x et renvoie x+5
+
+    
+    var fonction1 = (x) => x+5
+    
+    // version fct longue classic :
+    // function fonction1(x){
+
+    //     return x + 5
+    // }
+
+
+
+    // fonction2 prend deux paramètres x et y et renvoie x+y
+
+    var fonction2 = (x,y) => x+y;
+
+    // version fct longue classic :
+    // function fonction2(x, y){
+    //     return x + y
+
+    // }
+
+    // fonction0 ne prend aucun paramètre, demande la saisie par l'utilisateur d'un nombre et renvoie l'addition de 2 à ce nombre
+
+    function fonction0(){
+
+        nbr = window.parseFloat(prompt("Veuillez saisir une longueur"));
+        
+        return nbr + 2;
+
+    }
+
+
+		
+		</script>
+	</head>
+	<body>
+		<button onclick="console.log(fonction1(8.7))">Fonction avec un paramètre</button><br>
+		<button onclick="console.log(fonction2(8.7, Math.PI))">Fonction avec deux paramètres</button><br>
+		<button onclick="console.log(fonction0())">Fonction sans paramètre</button>
+	</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+  <title>Écriture d'une fonction simple</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script type="text/javascript">
+
+    function calculSurface() {
+
+    largeur = window.parseFloat(prompt("Veuillez saisir une largeur"));
+    longueur = window.parseFloat(prompt("Veuillez saisir une longueur")); 
+
+    if (largeur != null && longueur != null)  {
+            surface = largeur*longueur; 
+        }
+
+        alert(surface); 
+
+    }
+
+
+    function calculPerimetre() {
+
+    largeur = window.prompt("Veuillez saisir une largeur");
+    longueur = window.prompt("Veuillez saisir une longueur"); 
+
+    if (parseFloat(largeur) != null && parseFloat(longueur) != null)  {
+            perimetre = (largeur+longueur)*2; 
+        }
+
+        alert(perimetre); 
+
+    }
+
+    function calculPerimetre() {
+
+    rayon = window.prompt("Veuillez saisir un rayon"); 
+
+    if (parseFloat(rayon))  {
+            surfaceRayon = rayon * rayon * Math.PI;
+        }
+
+        alert(surfaceRayon); 
+    }
+    
+
+
+  </script>
+</head>
+<body>
+
+<h1>Écriture d'une fonction simple</h1>
+
+<p>Cliquez sur le bouton pour lancer la fonction&nbsp; de calcul de la surface : <button onclick="calculSurface()">Lancer la fonction</button></p>
+
+<br>
+
+<p>Cliquez sur le bouton pour lancer la fonction&nbsp; de calcul du périmetre : <button onclick="calculPerimetre()">Lancer la fonction</button></p>
+
+<br>
+
+<p>Cliquez sur le bouton pour lancer la fonction&nbsp; de calcul du rayon : <button onclick="calculPerimetre()">Lancer la fonction</button></p>
+
+
+</body>
+</html>

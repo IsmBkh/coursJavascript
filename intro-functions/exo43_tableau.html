@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+  <title>Utilisation d'un tableau</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <script type="text/javascript">
+
+    const tab = [-2,1,4] ;
+
+    // Créez une fonction additionne prenant un argument x et renvoyant le résultat de l'addition de x à 2
+
+    const additionne = x => x*2;
+
+
+
+    // Créez une fonction affiche, appelée au clic sur le bouton, qui affiche dans des boîtes d'alerte successivement le résultat de additionne appliqué au premier élément, puis au dernier élément du tableau (en utilisant la propriété length).
+
+    // function affiche(){
+
+    //     tab.forEach(element => {
+    //         return alert(additionne(element));
+            
+    //     });
+    // }
+
+    // correction : 
+
+    function affiche(){
+
+      alert(additionne(tab[0]));
+	    alert(additionne(tab[tab.length-1]));
+
+    }
+
+  </script>
+</head>
+<body>
+
+<h1>Utilisation d'un tableau</h1>
+
+<p>Cliquez sur le bouton pour lancer la fonction&nbsp;: <button onclick="affiche()">Lancer la fonction</button></p>
+
+
+</body>
+</html>
