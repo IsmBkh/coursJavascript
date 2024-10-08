@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<title>Ajout / Suppression d'éléments</title>
+<meta charset="UTF-8">
+<script>
+
+// 1.Sélectionner la liste d'identifiant "listecommissions".
+// 2.Créer un nouvel item de liste et lui affecter un texte.
+// 3.Ajouter ce nouvel élément de liste à la liste
+	
+	function ajout()
+		{
+            var liste=document.getElementById("listecommissions");
+
+            liste.insertAdjacentHTML("beforeend", "<li>Texte à insérer</li>");
+
+		}
+	
+</script>
+
+</head>
+<body onclick="ajout()">
+
+<ul id="listecommissions">
+	<li>1kg de farine</li>
+	<li>un pack de lait</li>
+</ul>
+
+</body>
+</html>

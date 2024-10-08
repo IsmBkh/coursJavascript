@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<title>Ajout / Suppression d'éléments</title>
+<meta charset="UTF-8">
+<script>
+
+// 1.Sélectionner la liste d'identifiant "listecommissions".
+// 2.Créer un nouvel item de liste et lui affecter un texte.
+// 3.Ajouter ce nouvel élément de liste à la liste
+	
+	function ajout()
+		{
+            var liste=document.getElementById("listecommissions");
+
+            // on recup la valeur de l'input 
+            var ingredient=document.getElementById("course").value;
+
+            // verif si non vide 
+            if(ingredient != ""){
+                // insert la valeur recuperer dans l'input
+                liste.insertAdjacentHTML("beforeend", `<li>${ingredient}</li>`);
+                messageErreur.textContent = "";
+            }else{
+                // Afficher un message d'erreur sous l'input si le champ est vide
+                messageErreur.textContent = "Veuillez saisir un ingrédient avant de valider.";
+                messageErreur.style.color = "red"; // Optionnel: styliser le message d'erreur
+            }
+
+		}
+	
+</script>
+
+</head>
+<body>
+
+<!-- entrée pour saisir texte -->
+<input type="text" id="course">
+<!-- entrée pour valider  -->
+<input type="button" value="OK" onclick="ajout()">
+<br>
+<p id="messageErreur"></p>
+
+
+<ul id="listecommissions">
+	<li>1kg de farine</li>
+	<li>un pack de lait</li>
+</ul>
+
+</body>
+</html>

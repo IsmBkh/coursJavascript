@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<title>Ajout / Suppression d'éléments</title>
+<meta charset="UTF-8">
+<script>
+
+// 1.Ajouter un bouton permettant, par un appel de fonction, de supprimer le dernier élément de la liste. Pour déclencher chaque suppression, un seul click doit suffire.
+// 2.Que se passe-t-il quand on essaie de supprimer un élément de la liste lorsque celle-ci est vide ? Corriger le code pour éviter cette erreur.
+	
+	function ajout(){
+        var liste=document.getElementById("listecommissions");
+
+        // on recup la valeur de l'input 
+        var ingredient=document.getElementById("course").value;
+
+        // verif si non vide 
+        if(ingredient != ""){
+            // insert la valeur recuperer dans l'input
+            liste.insertAdjacentHTML("beforeend", `<li>${ingredient}</li>`);
+            messageErreur.textContent = "";
+        }else{
+            // Afficher un message d'erreur sous l'input si le champ est vide
+            messageErreur.textContent = "Veuillez saisir un ingrédient avant de valider.";
+            // styliser le message d'erreur
+            messageErreur.style.color = "red"; 
+        }
+
+    }
+
+    function supprimer(){
+        var liste=document.getElementById("listecommissions");
+
+        // cible uniquement les noeuds non elements
+        var elementToDelete=liste.lastChild;
+
+        // cible nimportequel noeuds 
+        // var elementToDelete=liste.lastElementChild;
+        
+        liste.removeChild(elementToDelete);
+
+    }
+	
+</script>
+
+</head>
+<body>
+
+<!-- entrée pour saisir texte -->
+<input type="text" id="course">
+<!-- entrée pour valider  -->
+<input type="button" value="OK" onclick="ajout()">
+<input type="button" value="supprimer" onclick="supprimer()">
+
+<br>
+<p id="messageErreur"></p>
+
+
+<ul id="listecommissions">
+	<li>1kg de farine</li>
+	<li>un pack de lait</li>
+</ul>
+
+</body>
+</html>
