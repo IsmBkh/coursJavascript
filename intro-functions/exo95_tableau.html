@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>Méthodes des tableaux</title>
+<script>
+
+
+// 1. Définissez le tableau fibo initialisé à [1,1,2,3,5,8] et affichez-le dans la console
+
+const fibo = [1, 1, 2, 3, 5, 8];
+
+console.log(fibo);
+
+
+// 2. Ajoutez 13 à la fin du tableau et 0 au début, et affichez-le dans la console
+
+const add = fibo.push(13);
+// autre solution pour add en premier : alert(additionne(tab[0]));
+
+const add2 = fibo.unshift(0);
+// autre solution pour add en dernier : alert(additionne(tab[tab.length-1]));
+
+
+console.log(fibo);
+
+
+// 3. Remplacez chaque élément du tableau par le reste de sa division euclidienne par 4, stockez le résultat dans la variable fibo2 et affichez-le dan la console
+
+const fibo2 = [];
+
+
+function go(){
+    const fibo2 = fibo.map(x => x % 4);
+    
+    console.log(fibo2);
+}
+
+// 4. Triez le tableau par ordre croissant des nombres et affichez-le dans la console
+
+const trier = fibo.sort;
+
+console.log(trier);
+
+// *************** CORRECTION ******************
+
+// function go(){
+// 	let fibo=[1,1,2,3,5,8];
+// 	console.log("Tableau initial",fibo);
+	
+// 	fibo.push(13);
+// 	fibo.unshift(0);
+// 	console.log("Étape 1", fibo);
+	
+// 	fibo2=fibo.map(x=>x%4);
+// 	console.log("Étape 2", fibo2);
+	
+// 	fibo3=fibo2.sort((a,b) => a-b);
+// 	console.log("Étape 3", fibo2);
+// }
+
+
+
+</script>
+</head>
+<body>
+
+<button onclick="go()">Lancement</button>
+
+</body>
+</html>
